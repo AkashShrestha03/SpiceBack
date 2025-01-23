@@ -1,0 +1,482 @@
+{
+	"info": {
+		"_postman_id": "b309aa65-d4b4-4dc4-acb6-eef18e4a776d",
+		"name": "Spice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29611540"
+	},
+	"item": [
+		{
+			"name": "adminSignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:7000/api/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adminlogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"jagdish@gmail.com\",\r\n    \"password\":\"Jagdish3@\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7000/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adminUpdate",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"username\":\"Jagdish\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7000/api/userUpdate/6641f2e81b7781d219c794fe",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"userUpdate",
+						"6641f2e81b7781d219c794fe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7000/api/user",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignOut",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7000/api/signout",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"signout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDFmMmU4MWI3NzgxZDIxOWM3OTRmZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcxNzQ0NjI4MX0.Do9vPURgXNHyQRGgWDPsRy0qwnnDnEsiOpf5qv-ESNY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "productName",
+							"value": "Masala hi masala",
+							"contentType": "application/x-www-form-urlencoded",
+							"type": "text"
+						},
+						{
+							"key": "productDescription",
+							"value": "Hello",
+							"contentType": "application/x-www-form-urlencoded",
+							"type": "text"
+						},
+						{
+							"key": "productExpiry",
+							"value": "2 days",
+							"contentType": "application/x-www-form-urlencoded",
+							"type": "text"
+						},
+						{
+							"key": "productMRP",
+							"value": "100",
+							"contentType": "application/x-www-form-urlencoded",
+							"type": "text"
+						},
+						{
+							"key": "productPrice",
+							"value": "200",
+							"contentType": "application/x-www-form-urlencoded",
+							"type": "text"
+						},
+						{
+							"key": "productQuantity",
+							"value": "100",
+							"contentType": "application/x-www-form-urlencoded",
+							"type": "text"
+						},
+						{
+							"key": "productCategory",
+							"value": "Category 1",
+							"contentType": "application/x-www-form-urlencoded",
+							"type": "text"
+						},
+						{
+							"key": "productPicture",
+							"type": "file",
+							"src": "/C:/Users/Jagdish/OneDrive/Pictures/zoro.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:7000/api/product/addProducts/6641f2e81b7781d219c794fe",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"product",
+						"addProducts",
+						"6641f2e81b7781d219c794fe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDFmMmU4MWI3NzgxZDIxOWM3OTRmZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcxNzQ0NjI4MX0.Do9vPURgXNHyQRGgWDPsRy0qwnnDnEsiOpf5qv-ESNY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"productName\": \"Biryani Khaboo\",\r\n            \"productDescription\": \"Diss-cription \",\r\n            \"productExpiry\": \"10 Months\",\r\n            \"productMRP\": 799.5,\r\n            \"productPrice\": 699.5,\r\n            \"productQuantity\": 1.5\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7000/api/product/update/6641f2e81b7781d219c794fe/66607391c87ddb0599a26b73",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"product",
+						"update",
+						"6641f2e81b7781d219c794fe",
+						"66607391c87ddb0599a26b73"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDFmMmU4MWI3NzgxZDIxOWM3OTRmZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcxNzQ0NjI4MX0.Do9vPURgXNHyQRGgWDPsRy0qwnnDnEsiOpf5qv-ESNY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:7000/api/product/deleteProduct/6641f2e81b7781d219c794fe/6661aca553f564bbe24b5366",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"product",
+						"deleteProduct",
+						"6641f2e81b7781d219c794fe",
+						"6661aca553f564bbe24b5366"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7000/api/product/category",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"product",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7000/api/product/products",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"product",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCategory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDFmMmU4MWI3NzgxZDIxOWM3OTRmZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcxNzQ0NjI4MX0.Do9vPURgXNHyQRGgWDPsRy0qwnnDnEsiOpf5qv-ESNY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:7000/api/product/deleteCategory/6641f2e81b7781d219c794fe/6661aa2353f564bbe24b5355",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"product",
+						"deleteCategory",
+						"6641f2e81b7781d219c794fe",
+						"6661aa2353f564bbe24b5355"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "paginationProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7000/api/product/paginateProducts?page=1&limit=14",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"product",
+						"paginateProducts"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "14"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "addCart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userID\":\"663c8ed308ca69a1754e6be5\",\r\n    \"items\":[{\r\n        \"productID\":\"6660856154e626c393b8bf42\",\r\n        \"quantity\":1,\r\n        \"price\":400\r\n        }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7000/api/cart/addToCart/663c8ed308ca69a1754e6be5",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"cart",
+						"addToCart",
+						"663c8ed308ca69a1754e6be5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeCart",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userID\":\"663c8ed308ca69a1754e6be5\",\r\n    \"items\":[{\r\n        \"productID\":\"6660856154e626c393b8bf42\",\r\n        \"quantity\":1,\r\n        \"price\":400\r\n        }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7000/api/cart/removeFromCart/663c8ed308ca69a1754e6be5",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"cart",
+						"removeFromCart",
+						"663c8ed308ca69a1754e6be5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userCart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7000/api/cart/getCart/663c8ed308ca69a1754e6be5",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"cart",
+						"getCart",
+						"663c8ed308ca69a1754e6be5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
